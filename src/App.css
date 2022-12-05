@@ -3,11 +3,8 @@ body {
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .main {
+  scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -22,11 +19,13 @@ html {
 }
 
 .contenido {
-  position: relative;
+  /* position: relative; */
   display: -webkit-box;
   width: 100vw;
   height: 90vh;
   margin-top: 10vh;
+  /* overflow-x: hidden; */
+  /* display: flex; */
 }
 
 .myMenu {
@@ -53,11 +52,12 @@ html {
     border-color 0.15s ease-in-out;
 } */
 
-/* .py-100 {
+.py-100 {
   padding-top: 30vh;
   padding-bottom: 30vh;
   border: 1px solid;
-} */
+  width: 100vw;
+}
 
 /* .mb-100 {
   list-style: none;
