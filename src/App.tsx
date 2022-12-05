@@ -83,27 +83,26 @@ export default function App() {
   }, []);
 
   return (
-    <div>
-      <ul className="myMenu">
-        {list.map((item, i) => (
-          <li className="nav-item " key={i} ref={navRefs.current[i]}>
-            <a
-              href={`#s-${i}`}
-              className={`nav-link listTop ${
-                active === i ? "text-danger" : ""
-              }`}
-              onClick={(e) => {
-                scrollTo(i);
-              }}
-            >
-              {item}
-            </a>
-          </li>
-        ))}
-      </ul>
-
-      <ul className="mb-100">
-        {list.map((item, i) => (
+    <div className="main">
+      <div className="header">
+        {/* <ul className="myMenu">
+          {list.map((item, i) => (
+            <li className="nav-item " key={i} ref={navRefs.current[i]}>
+              <a
+                href={`#s-${i}`}
+                className={`nav-link ${active === i ? "text-danger" : ""}`}
+                onClick={(e) => {
+                  scrollTo(i);
+                }}
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul> */}
+      </div>
+      <div className="contenido">
+        {/* {list.map((item, i) => (
           <li id={`s-${i}`} ref={scrollRefs.current[i]} className="py-100">
             <h3>{item}</h3>
             <p>
@@ -111,8 +110,8 @@ export default function App() {
               dicta.
             </p>
           </li>
-        ))}
-      </ul>
+        ))} */}
+      </div>
     </div>
   );
 }
