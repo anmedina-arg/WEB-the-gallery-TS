@@ -10,31 +10,30 @@ html {
 .main {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
   box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .header {
-  border: 2px solid red;
-  background-color: red;
   height: 10vh;
   width: 100vw;
   position: fixed;
-  top: 0;
 }
 
 .contenido {
+  position: relative;
   display: -webkit-box;
+  width: 100vw;
   height: 90vh;
-  border: 2px solid green;
-  top: 10vh;
+  margin-top: 10vh;
 }
 
 .myMenu {
   width: 100vw;
   background-color: lightgoldenrodyellow;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 0;
   padding: 0;
 }
@@ -42,29 +41,29 @@ html {
 /* .listTop {
   white-space: nowrap;
 } */
-.nav-item {
+/* .nav-item {
   list-style: none;
-}
+} */
 
-.nav-link {
+/* .nav-link {
   display: block;
   color: #0d6efd;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
-}
+} */
 
-.py-100 {
-  /* padding-top: 30vh;
-  padding-bottom: 30vh; */
+/* .py-100 {
+  padding-top: 30vh;
+  padding-bottom: 30vh;
   border: 1px solid;
-}
+} */
 
 /* .mb-100 {
   list-style: none;
   margin-bottom: 200px;
 } */
 
-.text-danger {
+/* .text-danger {
   border-bottom: 2px solid red;
-}
+} */

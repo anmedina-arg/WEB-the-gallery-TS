@@ -85,7 +85,7 @@ export default function App() {
   return (
     <div className="main">
       <div className="header">
-        {/* <ul className="myMenu">
+        <ul className="myMenu">
           {list.map((item, i) => (
             <li className="nav-item " key={i} ref={navRefs.current[i]}>
               <a
@@ -99,7 +99,7 @@ export default function App() {
               </a>
             </li>
           ))}
-        </ul> */}
+        </ul>
       </div>
       <div className="contenido">
         {/* {list.map((item, i) => (
