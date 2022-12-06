@@ -10,10 +10,9 @@ const StyledHome = styled.div`
 `;
 
 export const Home = () => {
-  return (
-    <StyledHome>
-      <StyledBG backgroundimg={BG01}></StyledBG>
-      {/* <StyledTransition backgroundimg={TR01}></StyledTransition> */}
-    </StyledHome>
-  );
+  return <StyledBG backgroundimg={BG01}></StyledBG>;
+};
+
+export const Tr01 = () => {
+  return <StyledTransition backgroundimg={TR01}></StyledTransition>;
 };

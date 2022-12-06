@@ -8,7 +8,6 @@ export const StyledBG = styled.div<StyledBGProps>`
   border: none;
   background-image: url(${({ backgroundimg }) => backgroundimg});
   background-size: 100% 100%;
-  color: #fff;
   height: 100%;
-  width: 100%;
+  width: 100vw;
 `;

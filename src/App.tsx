@@ -9,8 +9,7 @@ import { PathOfArt } from "./pages/04-PathOfArt";
 import { Reward } from "./pages/05-Rewar";
 import { Gallery } from "./pages/06-Gallery";
 import { ThePad } from "./pages/07-ThePad";
-
-var scrolling = false;
+import { Tr01 } from "./pages/01-Home";
 
 export default function App() {
   const [active, setActive] = useState(0);
@@ -19,6 +18,7 @@ export default function App() {
 
   const list = [
     { name: "Home", component: <Home /> },
+    { name: "", component: <Tr01 /> },
     { name: "Experts", component: <Expert /> },
     { name: "The App", component: <TheApp /> },
     { name: "Path of art", component: <PathOfArt /> },
@@ -27,37 +27,29 @@ export default function App() {
     { name: "The pad", component: <ThePad /> },
   ];
 
-  scrollRefs.current = [...Array(list.length).keys()].map(
+  scrollRefs.current = [...Array.from(Array(list.length).keys())].map(
     (_, i) => scrollRefs.current[i] ?? createRef()
   );
 
   console.log(scrollRefs);
 
-  navRefs.current = [...Array(list.length).keys()].map(
+  navRefs.current = [...Array.from(Array(list.length).keys())].map(
     (_, i) => navRefs.current[i] ?? createRef()
   );
 
   console.log(navRefs);
 
-  const scrollTo = (index) => {
-    console.log("setting scrolling" + scrolling);
-
-    scrolling = true;
-
+  const scrollTo = (index: number) => {
     scrollRefs.current[index].current.scrollIntoView({
       behavior: "smooth",
       inline: "start",
     });
 
     setActive(index);
-
-    setTimeout(() => {
-      scrolling = false;
-      navRefs.current[index].current.scrollIntoView({
-        behavior: "smooth",
-        inline: "start",
-      });
-    }, 1000);
+    navRefs.current[index].current.scrollIntoView({
+      behavior: "smooth",
+      inline: "start",
+    });
   };
 
   // const scrollHandler = (e) => {
@@ -92,16 +84,16 @@ export default function App() {
   //   };
   // }, []);
 
-  // useEffect(() => {
-  //   const scrollContainer = document.querySelector("nav");
-  //   console.log(scrollContainer);
-  //   if (scrollContainer === null) return;
-  //   scrollContainer.addEventListener("wheel", (evt) => {
-  //     evt.preventDefault();
-  //     scrollContainer.scrollLeft += evt.deltaY;
-  //     scrollContainer.scrollIntoView({ behavior: "smooth" });
-  //   });
-  // }, []);
+  useEffect(() => {
+    const scrollContainer = document.querySelector("nav");
+    console.log(scrollContainer);
+    if (scrollContainer === null) return;
+    scrollContainer.addEventListener("wheel", (evt) => {
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+      scrollContainer.scrollIntoView({ behavior: "smooth" });
+    });
+  }, []);
 
   return (
     <div className="main">

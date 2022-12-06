@@ -5,6 +5,7 @@ body {
 
 .main {
   scroll-behavior: smooth;
+  /* scroll-snap-align: start; */
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -19,12 +20,13 @@ body {
 }
 
 .contenido {
+  scroll-behavior: smooth;
   /* position: relative; */
   display: -webkit-box;
   width: 100vw;
   height: 90vh;
   margin-top: 10vh;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* display: flex; */
 }
 
@@ -53,9 +55,12 @@ body {
 } */
 
 .py-100 {
-  border: 1px solid;
-  width: 130vw;
+  display: flex;
   height: 100%;
+}
+
+.contenedorsito {
+  display: flex;
 }
 
 /* .mb-100 {

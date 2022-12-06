@@ -9,18 +9,10 @@ const StyledSlide3 = styled.div`
   box-sizing: border-box;
 `;
 
-export const StyledSlide4 = styled.div`
-  background-color: purple;
-  color: #fff;
-  width: 40%;
-  height: 100%;
-`;
-
 export const Expert = () => {
   return (
     <div>
       <StyledSlide3 />
-      <StyledSlide4 />
     </div>
   );
 };

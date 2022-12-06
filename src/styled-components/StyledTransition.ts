@@ -8,6 +8,6 @@ export const StyledTransition = styled.div<StyledTransitionProps>`
   border: none;
   background-image: url(${({ backgroundimg }) => backgroundimg});
   background-size: 100% 100%;
-  width: 35%;
+  width: 35vw;
   height: 100%;
 `;
