@@ -1,26 +1,19 @@
 import styled from "styled-components";
+import BG01 from "../assets/home/01-bg_home.png";
+import TR01 from "../assets/home/02-bg_transition-01.png";
+import { StyledBG } from "../styled-components/StyledBG";
+import { StyledTransition } from "../styled-components/StyledTransition";
 
-const StyledSlide1 = styled.div`
-  background-color: red;
-  color: #fff;
-  height: 100%;
-  width: 100vw;
-  border: 10px solid black;
-  box-sizing: border-box;
-`;
-
-export const StyledSlide2 = styled.div`
-  background-color: purple;
-  color: #fff;
-  width: 40%;
+const StyledHome = styled.div`
+  display: flex;
   height: 100%;
 `;
 
 export const Home = () => {
   return (
-    <div>
-      <StyledSlide1 />
-      <StyledSlide2 />
-    </div>
+    <StyledHome>
+      <StyledBG backgroundimg={BG01}></StyledBG>
+      {/* <StyledTransition backgroundimg={TR01}></StyledTransition> */}
+    </StyledHome>
   );
 };
