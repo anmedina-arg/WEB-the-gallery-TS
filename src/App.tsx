@@ -13,8 +13,8 @@ import { Tr01 } from "./pages/01-Home";
 
 export default function App() {
   const [active, setActive] = useState(0);
-  const scrollRefs = useRef([]);
-  const navRefs = useRef([]);
+  const scrollRefs = useRef<any[]>([]);
+  const navRefs = useRef<any[]>([]);
 
   const list = [
     { name: "Home", component: <Home /> },
@@ -51,38 +51,6 @@ export default function App() {
       inline: "start",
     });
   };
-
-  // const scrollHandler = (e) => {
-  //   if (e.target !== document) return;
-
-  //   if (scrolling === true) return;
-
-  //   const scrollRefsElements = scrollRefs.current;
-
-  //   scrollRefsElements.forEach((el, i) => {
-  //     const rect = el.current.getBoundingClientRect();
-  //     const elemTop = rect.top;
-  //     const elemBottom = rect.bottom;
-  //     const isVisible =
-  //       elemTop < window.innerHeight / 2 && elemBottom > window.innerHeight / 2;
-
-  //     if (isVisible) {
-  //       navRefs.current[i].current.scrollIntoView({
-  //         behavior: "smooth",
-  //         block: "start",
-  //         inline: "center",
-  //       });
-  //       setActive(i);
-  //     }
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", scrollHandler, true);
-  //   return () => {
-  //     window.removeEventListener("scroll", scrollHandler, true);
-  //   };
-  // }, []);
 
   useEffect(() => {
     const scrollContainer = document.querySelector("nav");
