@@ -5,6 +5,7 @@ type StyledPrimaryBtnProps = {
 };
 
 const StyledPrimaryBtn = styled.div<StyledPrimaryBtnProps>`
+  margin: 0.25rem;
   box-sizing: border-box;
   text-transform: uppercase;
   background-color: transparent;
@@ -12,8 +13,8 @@ const StyledPrimaryBtn = styled.div<StyledPrimaryBtnProps>`
   border: 3px solid;
   border-color: ${({ ligth }) => (ligth ? "#A96DFC" : "#743980")};
   border-radius: 40px;
-  height: 40px;
-  width: 184px;
+  height: 3rem;
+  width: 15rem;
   font-weight: 700;
   font-size: 130%;
   justify-content: center;

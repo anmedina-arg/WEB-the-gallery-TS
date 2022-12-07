@@ -34,6 +34,7 @@ export default function App() {
     { name: "My gallery", component: <Gallery /> },
     { name: "", component: <Tr06 /> },
     { name: "The pad", component: <ThePad /> },
+    { name: "", component: "" },
   ];
 
   scrollRefs.current = [...Array.from(Array(list.length).keys())].map(
@@ -165,6 +166,7 @@ export default function App() {
           href="#s-0"
           children={<TheGallery nav />}
         ></a>
+        {/* <TheGallery nav /> */}
         <div className="myMenu">
           {list.map((item, i) => (
             <span key={i} ref={navRefs.current[i]}>
