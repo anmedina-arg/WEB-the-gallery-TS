@@ -10,7 +10,15 @@ const StyledHome = styled.div`
 `;
 
 export const Home = () => {
-  return <StyledBG backgroundimg={BG01}></StyledBG>;
+  return (
+    <StyledBG backgroundimg={BG01}>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </StyledBG>
+  );
 };
 
 export const Tr01 = () => {

@@ -2,14 +2,16 @@ import "./App.css";
 
 import React, { createRef, useRef, useState, useEffect } from "react";
 
-import { Home } from "./pages/01-Home";
-import { Expert } from "./pages/02-Expert";
-import { TheApp } from "./pages/03-TheApp";
-import { PathOfArt } from "./pages/04-PathOfArt";
-import { Reward } from "./pages/05-Rewar";
-import { Gallery } from "./pages/06-Gallery";
+import { Home, Tr01 } from "./pages/01-Home";
+import { Expert, Tr02 } from "./pages/02-Expert";
+import { TheApp, Tr03 } from "./pages/03-TheApp";
+import { PathOfArt, Tr04 } from "./pages/04-PathOfArt";
+import { Reward, Tr05 } from "./pages/05-Rewar";
+import { Gallery, Tr06 } from "./pages/06-Gallery";
 import { ThePad } from "./pages/07-ThePad";
-import { Tr01 } from "./pages/01-Home";
+import { Signin } from "./styled-components/TwiterBtn";
+import { PrimaryBtn } from "./styled-components/PrimaryBtn";
+import { TheGallery } from "./styled-components/GalleryIcon";
 
 var scrolling = false;
 
@@ -19,13 +21,18 @@ export default function App() {
   const navRefs = useRef<any[]>([]);
 
   const list = [
-    { name: "Home", component: <Home /> },
+    { name: "", component: <Home /> },
     { name: "", component: <Tr01 /> },
     { name: "Experts", component: <Expert /> },
+    { name: "", component: <Tr02 /> },
     { name: "The App", component: <TheApp /> },
+    { name: "", component: <Tr03 /> },
     { name: "Path of art", component: <PathOfArt /> },
+    { name: "", component: <Tr04 /> },
     { name: "Reward Claim", component: <Reward /> },
+    { name: "", component: <Tr05 /> },
     { name: "My gallery", component: <Gallery /> },
+    { name: "", component: <Tr06 /> },
     { name: "The pad", component: <ThePad /> },
   ];
 
@@ -153,9 +160,14 @@ export default function App() {
   return (
     <div className="main">
       <div className="header">
+        <a
+          className="icon_gallery"
+          href="#s-0"
+          children={<TheGallery nav />}
+        ></a>
         <div className="myMenu">
           {list.map((item, i) => (
-            <span className="nav-item " key={i} ref={navRefs.current[i]}>
+            <span key={i} ref={navRefs.current[i]}>
               <a
                 href={`#s-${i}`}
                 className={`nav-link ${active === i ? "text-danger" : ""}`}
@@ -168,6 +180,8 @@ export default function App() {
             </span>
           ))}
         </div>
+        <Signin />
+        <PrimaryBtn label="conect" />
       </div>
       <nav id="gallery" className="contenido">
         {list.map((item, i) => (

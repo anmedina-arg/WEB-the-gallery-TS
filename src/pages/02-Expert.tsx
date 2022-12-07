@@ -1,18 +1,13 @@
 import styled from "styled-components";
-
-const StyledSlide3 = styled.div`
-  background-color: red;
-  color: #fff;
-  height: 100%;
-  width: 100vw;
-  border: 10px solid black;
-  box-sizing: border-box;
-`;
+import BG02 from "../assets/experts/03-bg_experts.png";
+import TR02 from "../assets/experts/04-bg_transition-02.png";
+import { StyledBG } from "../styled-components/StyledBG";
+import { StyledTransition } from "../styled-components/StyledTransition";
 
 export const Expert = () => {
-  return (
-    <div>
-      <StyledSlide3 />
-    </div>
-  );
+  return <StyledBG backgroundimg={BG02}></StyledBG>;
+};
+
+export const Tr02 = () => {
+  return <StyledTransition backgroundimg={TR02}></StyledTransition>;
 };
