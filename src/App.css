@@ -48,11 +48,8 @@ body {
 }
 
 .icon_gallery {
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  height: 10%;
+  height: 100%;
+  width: 10%;
 }
 
 .nav-link {

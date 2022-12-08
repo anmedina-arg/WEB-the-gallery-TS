@@ -11,7 +11,7 @@ import { Gallery, Tr06 } from "./pages/06-Gallery";
 import { ThePad } from "./pages/07-ThePad";
 import { Signin } from "./styled-components/TwiterBtn";
 import { PrimaryBtn } from "./styled-components/PrimaryBtn";
-import { TheGallery } from "./styled-components/GalleryIcon";
+import { StyledIconGallery } from "./styled-components/Icon";
 
 var scrolling = false;
 
@@ -163,11 +163,9 @@ export default function App() {
       <div className="responsive">hola soy componente responsive</div>
       <div className="content">
         <div className="header">
-          <a
-            className="icon_gallery"
-            href="#s-0"
-            children={<TheGallery nav />}
-          ></a>
+          <a className="icon_gallery" href="#s-0">
+            <StyledIconGallery></StyledIconGallery>
+          </a>
           <div className="myMenu">
             {list.map((item, i) => (
               <span key={i} ref={navRefs.current[i]}>
