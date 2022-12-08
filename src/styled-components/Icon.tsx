@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import LOGO from "../assets/LOGO.png";
 
-export const StyledIconGallery = styled.div`
+type StyledIconGalleyProps = {
+  center?: boolean;
+};
+
+export const StyledIconGallery = styled.div<StyledIconGalleyProps>`
+  background-position: ${({ center }) => (center ? "center" : "")};
   background-image: url(${LOGO});
   background-repeat: no-repeat;
   background-size: contain;
