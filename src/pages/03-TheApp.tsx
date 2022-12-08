@@ -7,6 +7,8 @@ import bgImg from "../assets/theapp/frame-off_theapp.png";
 import bgImgHover from "../assets/theapp/frame-hover_theapp.png";
 import { StyledTitle } from "../styled-components/StyledTitle";
 import { StyledSubTitle } from "../styled-components/StyledSubTitle";
+import { StyledIconGallery } from "../styled-components/Icon";
+import { PrimaryBtn } from "../styled-components/PrimaryBtn";
 
 type StyledBoxProp = {
   img: string;
@@ -31,15 +33,49 @@ const StyledBox = styled.div<StyledBoxProp>`
     background-image: url(${({ hover }) => hover});
   }
 `;
+
+const StyledTextContainer = styled.div`
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const StyledFlex = styled.div`
+  display: flex;
+  width: 100%;
+`;
+
+const StyledIcon = styled.div`
+  width: 30%;
+  margin: 0.5rem;
+`;
+
+const Styledp = styled.p`
+  text-align: center;
+`;
 export const TheApp = () => {
   return (
     <StyledBG backgroundimg={BG03}>
       <StyledTheApp>
         <StyledBox img={bgImg} hover={bgImgHover} />
-        <div>
-          <StyledTitle>hola soy titulo</StyledTitle>
-          <StyledSubTitle>hola soy subtitle</StyledSubTitle>
-        </div>
+        <StyledTextContainer>
+          <StyledFlex>
+            <StyledIcon>
+              <StyledIconGallery center />
+            </StyledIcon>
+            <div>
+              <StyledTitle>is comming soon.</StyledTitle>
+              <StyledSubTitle>SHARE YOUR NFTs</StyledSubTitle>
+              <StyledSubTitle>WITH THE WORLD</StyledSubTitle>
+            </div>
+          </StyledFlex>
+          <Styledp>
+            Keep up to date with our news and find out when is the Grand
+            Opening!
+          </Styledp>
+          <PrimaryBtn label="learn more" />
+        </StyledTextContainer>
       </StyledTheApp>
     </StyledBG>
   );
