@@ -7,6 +7,7 @@ import bgImg from "../assets/theapp/frame-off_theapp.png";
 import bgImgHover from "../assets/theapp/frame-hover_theapp.png";
 import { StyledTitle } from "../styled-components/StyledTitle";
 import { StyledSubTitle } from "../styled-components/StyledSubTitle";
+import { TheGallery } from "../styled-components/GalleryIcon";
 
 type StyledBoxProp = {
   img: string;
@@ -36,8 +37,11 @@ export const TheApp = () => {
     <StyledBG backgroundimg={BG03}>
       <StyledTheApp>
         <StyledBox img={bgImg} hover={bgImgHover} />
-        <StyledTitle>hola soy titulo</StyledTitle>
-        <StyledSubTitle>hola soy subtitle</StyledSubTitle>
+        <div>
+          <TheGallery />
+          <StyledTitle>hola soy titulo</StyledTitle>
+          <StyledSubTitle>hola soy subtitle</StyledSubTitle>
+        </div>
       </StyledTheApp>
     </StyledBG>
   );

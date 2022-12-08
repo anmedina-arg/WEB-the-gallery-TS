@@ -160,43 +160,45 @@ export default function App() {
 
   return (
     <div className="main">
-      <div className="header">
-        <a
-          className="icon_gallery"
-          href="#s-0"
-          children={<TheGallery nav />}
-        ></a>
-        {/* <TheGallery nav /> */}
-        <div className="myMenu">
-          {list.map((item, i) => (
-            <span key={i} ref={navRefs.current[i]}>
-              <a
-                href={`#s-${i}`}
-                className={`nav-link ${active === i ? "text-danger" : ""}`}
-                onClick={(e) => {
-                  scrollTo(i);
-                }}
-              >
-                {item.name}
-              </a>
-            </span>
-          ))}
-        </div>
-        <Signin />
-        <PrimaryBtn label="conect" />
-      </div>
-      <nav id="gallery" className="contenido">
-        {list.map((item, i) => (
-          <div
-            id={`s-${i}`}
-            ref={scrollRefs.current[i]}
-            onWheel={scrollHandler}
-            className="py-100"
-          >
-            {item.component}
+      <div className="responsive">hola soy componente responsive</div>
+      <div className="content">
+        <div className="header">
+          <a
+            className="icon_gallery"
+            href="#s-0"
+            children={<TheGallery nav />}
+          ></a>
+          <div className="myMenu">
+            {list.map((item, i) => (
+              <span key={i} ref={navRefs.current[i]}>
+                <a
+                  href={`#s-${i}`}
+                  className={`nav-link ${active === i ? "text-danger" : ""}`}
+                  onClick={(e) => {
+                    scrollTo(i);
+                  }}
+                >
+                  {item.name}
+                </a>
+              </span>
+            ))}
           </div>
-        ))}
-      </nav>
+          <Signin />
+          <PrimaryBtn label="conect" />
+        </div>
+        <nav id="gallery" className="contenido">
+          {list.map((item, i) => (
+            <div
+              id={`s-${i}`}
+              ref={scrollRefs.current[i]}
+              onWheel={scrollHandler}
+              className="py-100"
+            >
+              {item.component}
+            </div>
+          ))}
+        </nav>
+      </div>
     </div>
   );
 }

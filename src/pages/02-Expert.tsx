@@ -22,7 +22,7 @@ type StyledBoxProp = {
   marTop?: boolean;
 };
 const StyledBox = styled.div<StyledBoxProp>`
-  background-position-y: ${({ marTop }) => (marTop ? "40%" : "")};
+  background-position-y: ${({ marTop }) => (marTop ? "40%" : "30%")};
   background-image: url(${({ img }) => img});
   background-size: contain;
   background-repeat: no-repeat;
