@@ -81,20 +81,20 @@ body {
   height: 100%;
 }
 
-/* @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .nav-link {
     font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .responsive {
     display: block;
-    height: 100vh;
-    width: 100vw;
-    background-color: blue;
+    height: 100%;
+    width: 100%;   
   }
   .content {
     display: none;
   }
-} */
+ 
+}

@@ -27,10 +27,12 @@ const StyledBox = styled.div<StyledBoxProp>`
   background-position-y: 75%;
   width: 60%;
   height: 100%;
-  &:hover {
-    background-image: url(${({ hover }) => hover});
-  }
+  &:hover{    
+    background-image: url(${({hover}) => hover});
+  };
 `;
+
+
 export const TheApp = () => {
   return (
     <StyledBG backgroundimg={BG03}>

@@ -1,7 +1,6 @@
 import React from "react";
 // import RelaxedJazz from '../music/RelaxedJazz.wav'
-
-
+// import clickLuz from '../music/clickLuz.mp3'
 
 const Player = ( ) => {
 //   const audio = new Audio(RelaxedJazz);
