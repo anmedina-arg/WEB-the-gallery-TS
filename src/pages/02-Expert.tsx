@@ -3,9 +3,9 @@ import BG02 from "../assets/experts/03-bg_experts.png";
 import TR02 from "../assets/experts/04-bg_transition-02.png";
 import { StyledBG } from "../styled-components/StyledBG";
 import { StyledTransition } from "../styled-components/StyledTransition";
-import texto from '../assets/experts/TXT.png'
-import bgImg from '../assets/experts/nft-off_experts.png'
-import bgImgHover from '../assets/experts/nft-hover_experts.png'
+import texto from "../assets/experts/TXT.png";
+import bgImg from "../assets/experts/nft-off_experts.png";
+import bgImgHover from "../assets/experts/nft-hover_experts.png";
 
 const StyledExpert = styled.div`
   display: flex;
@@ -13,37 +13,35 @@ const StyledExpert = styled.div`
   justify-content: space-around;
   height: 100%;
   width: 100%;
- 
 `;
 
 type StyledBoxProp = {
-  img : string;
-  hover?: string; 
+  img: string;
+  hover?: string;
   big?: boolean;
   marTop?: boolean;
-}
+};
 const StyledBox = styled.div<StyledBoxProp>`
-  background-image:url(${({img}) => img});
+  background-position-y: ${({ marTop }) => (marTop ? "40%" : "")};
+  background-image: url(${({ img }) => img});
   background-size: contain;
-  background-repeat: no-repeat; 
-  height: 80%;
-  width: ${({big}) => (big ? '40%' : '30%')};
-  &:hover{    
-    background-image: url(${({hover}) => hover});
-  };
-  margin-top: ${({marTop}) => (marTop ? '10%' :'')};
-
+  background-repeat: no-repeat;
+  height: 100%;
+  width: ${({ big }) => (big ? "40%" : "30%")};
+  &:hover {
+    background-image: url(${({ hover }) => hover});
+  }
+  /* margin-top: ${({ marTop }) => (marTop ? "40%" : "")}; */
 `;
 export const Expert = () => {
-  return(
+  return (
     <StyledBG backgroundimg={BG02}>
       <StyledExpert>
         <StyledBox img={texto} marTop hover={texto} />
-        <StyledBox img={bgImg} big hover={bgImgHover}/>
+        <StyledBox img={bgImg} big hover={bgImgHover} />
       </StyledExpert>
-
     </StyledBG>
-  )
+  );
 };
 
 export const Tr02 = () => {
