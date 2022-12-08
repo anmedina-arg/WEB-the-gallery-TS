@@ -29,26 +29,24 @@ const StyledBox = styled.div<StyledBoxProp>`
   background-position-y: 75%;
   width: 60%;
   height: 100%;
-  &:hover{    
-    background-image: url(${({hover}) => hover});
-  };
+  &:hover {
+    background-image: url(${({ hover }) => hover});
+  }
 `;
 
-
-
-const StyledTextContainer = styled.div`
+export const StyledTextContainer = styled.div`
   display: flex;
   align-self: center;
   align-items: center;
   flex-direction: column;
 `;
 
-const StyledFlex = styled.div`
+export const StyledFlex = styled.div`
   display: flex;
   width: 100%;
 `;
 
-const StyledIcon = styled.div`
+export const StyledIcon = styled.div`
   width: 30%;
   margin: 0.5rem;
 `;
