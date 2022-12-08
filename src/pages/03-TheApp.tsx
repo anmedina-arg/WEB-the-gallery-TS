@@ -45,14 +45,21 @@ export const StyledFlex = styled.div`
   display: flex;
   width: 100%;
 `;
+type StyledIconProps = {
+  big?: boolean;
+};
 
-export const StyledIcon = styled.div`
-  width: 30%;
+export const StyledIcon = styled.div<StyledIconProps>`
+  width: ${({ big }) => (big ? "80%" : "30%")};
+  height: ${({ big }) => (big ? "100%" : "")};
   margin: 0.5rem;
 `;
-
-const Styledp = styled.p`
+type StyledpProps = {
+  cream?: boolean;
+};
+export const Styledp = styled.p<StyledpProps>`
   text-align: center;
+  color: ${({ cream }) => (cream ? "#FFEAE5" : "#000")};
 `;
 export const TheApp = () => {
   return (
