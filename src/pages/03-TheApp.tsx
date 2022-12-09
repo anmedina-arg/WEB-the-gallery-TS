@@ -57,10 +57,15 @@ const Styledp = styled.p`
   text-align: center;
 `;
 export const TheApp = () => {
+  const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')
+  const offHoverMusic = require('../assets/music/Light-Switch-OFF.wav')
+  const onAudio = new Audio(onHoverMusic)
+  const offAudio = new Audio(offHoverMusic)
+  
   return (
     <StyledBG backgroundimg={BG03}>
       <StyledTheApp>
-        <StyledBox img={bgImg} hover={bgImgHover} />
+        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImg} hover={bgImgHover} />
         <StyledTextContainer>
           <StyledFlex>
             <StyledIcon>

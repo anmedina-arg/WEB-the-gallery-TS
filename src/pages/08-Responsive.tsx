@@ -79,8 +79,7 @@ const StyledResponsive1 = styled.div`
 `;
 
 export const Responsive = () => {
-  return (
-    
+  return (    
         <StyledBox img={bgImg}>
             <StyledResponsive>   
                 <img className="imgResponsive" src={LOGO} />

@@ -34,11 +34,15 @@ const StyledBox = styled.div<StyledBoxProp>`
   /* margin-top: ${({ marTop }) => (marTop ? "40%" : "")}; */
 `;
 export const Expert = () => {
+  const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')
+  const offHoverMusic = require('../assets/music/Light-Switch-OFF.wav')
+  const onAudio = new Audio(onHoverMusic)
+  const offAudio = new Audio(offHoverMusic)
   return (
     <StyledBG backgroundimg={BG02}>
       <StyledExpert>
-        <StyledBox img={texto} marTop hover={texto} />
-        <StyledBox img={bgImg} big hover={bgImgHover} />
+        <StyledBox  img={texto} marTop hover={texto} />
+        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImg} big hover={bgImgHover} />
       </StyledExpert>
     </StyledBG>
   );

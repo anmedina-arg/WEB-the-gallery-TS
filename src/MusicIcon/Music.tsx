@@ -19,31 +19,28 @@ const Player = ( ) => {
   const relaxingJazzMusic = require('../assets/music/RelaxedJazz.wav')
   const audio = new Audio(relaxingJazzMusic);
   
-  function HandlerMusic(){
-    if(active){
-      audio.play()  ;     
-    }else{
-      audio.pause();
-    }
-    setActive(!active)
-  }
 
-  
 
   return (
    <div>    
-     <button
-        onClick={() => {
-          audio.loop = true;
-          audio.play();
-        }}
-      >
-        Play
-      </button>
-      <button onClick={() => (audio.pause())}>Pause</button> 
+      {!active ? (
+        <button onClick={() =>{
+          relaxingJazzMusic.play();
+          setActive(!active)
+        }}> Play</button>
+      )
+        : (
+          <button onClick={() =>{
+            relaxingJazzMusic.pause();
+          setActive(!active)
+          }}
+          >pause</button>
+        )
+    }
    </div>
   );
 };
+
 
 export default Player;
 

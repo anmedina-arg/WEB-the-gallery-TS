@@ -31,10 +31,15 @@ const StyledBox = styled.div<StyledBoxProp>`
 `;
 
 export const Reward = () => {
+  const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')
+  const offHoverMusic = require('../assets/music/Light-Switch-OFF.wav')
+  const onAudio = new Audio(onHoverMusic)
+  const offAudio = new Audio(offHoverMusic)
+  
   return (
     <StyledBG backgroundimg={BG05}>
       <StyledReward>
-      <StyledBox  img={bgImg} hover={bgImgHover}/>
+      <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImg} hover={bgImgHover}/>
       </StyledReward>
     </StyledBG>
 

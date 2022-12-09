@@ -33,11 +33,15 @@ const StyledBox = styled.div<StyledBoxProp>`
 `;
 
 export const Gallery = () => {
+  const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')
+  const offHoverMusic = require('../assets/music/Light-Switch-OFF.wav')
+  const onAudio = new Audio(onHoverMusic)
+  const offAudio = new Audio(offHoverMusic)
   return (
     <StyledBG backgroundimg={BG06}>
       <StyledGallery>
-        <StyledBox img={bgImgLeft} hover={bgImgLeftHover} />
-        <StyledBox img={bgImgRigth} hover={bgImgRigthHover} />
+        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImgLeft} hover={bgImgLeftHover} />
+        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImgRigth} hover={bgImgRigthHover} />
       </StyledGallery>
     </StyledBG>
   );

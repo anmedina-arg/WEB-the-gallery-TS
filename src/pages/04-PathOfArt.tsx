@@ -44,16 +44,21 @@ const StyledBox = styled.div<StyledBoxProp>`
 `;
 
 export const PathOfArt = () => {
+  const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')
+  const offHoverMusic = require('../assets/music/Light-Switch-OFF.wav')
+  const onAudio = new Audio(onHoverMusic)
+  const offAudio = new Audio(offHoverMusic)
+
   return (
     <StyledBG backgroundimg={BG04}>
       <StyledPathOfArt>
-        <StyledBox img={bgImg} hover={bgImgHover}>
+        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImg} hover={bgImgHover}>
           <a href="#"> 
           <p>ROAD</p>
           <p>MAP</p>
           </a>
         </StyledBox>
-        <StyledBox img={bgImg} hover={bgImgHover}>
+        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImg} hover={bgImgHover}>
         <a href="#"> 
           <p>WHITE</p>
           <p>PAPER</p>
