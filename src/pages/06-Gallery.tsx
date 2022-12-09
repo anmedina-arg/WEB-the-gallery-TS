@@ -7,12 +7,21 @@ import bgImgRigth from "../assets/gallery/nft-off_mygallery_der.png";
 import bgImgRigthHover from "../assets/gallery/nft-hover_mygallery_der.png";
 import bgImgLeft from "../assets/gallery/nft-off_mygallery_izq.png";
 import bgImgLeftHover from "../assets/gallery/nft-hover_mygallery_izq.png";
+import { StyledIconLigthGallery } from "../styled-components/IconLigth";
+import { StyledFlex, StyledIcon, Styledp } from "./03-TheApp";
+import { StyledTitle } from "../styled-components/StyledTitle";
+import { PrimaryBtn } from "../styled-components/PrimaryBtn";
 
 const StyledGallery = styled.div`
   display: flex;
   justify-content: space-between;
   height: 100%;
   width: 100%;
+  position: relative;
+  left: 50%;
+  max-width: 1080px;
+  display: flex;
+  transform: translate(-50%);
 `;
 
 type StyledBoxProp = {
@@ -26,12 +35,26 @@ const StyledBox = styled.div<StyledBoxProp>`
   background-size: contain;
   background-repeat: no-repeat;
   width: 35%;
-  /* height: 100%; */
   &:hover {
     background-image: url(${({ hover }) => hover});
   }
 `;
+export const StyledTextContainerGallery = styled.div`
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  height: 70%;
+`;
 
+export const StyledFlexGallery = styled.div`
+  display: flex;
+  width: 100%;
+  height: 25%;
+`;
 export const Gallery = () => {
   const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')
   const offHoverMusic = require('../assets/music/Light-Switch-OFF.wav')
@@ -41,6 +64,17 @@ export const Gallery = () => {
     <StyledBG backgroundimg={BG06}>
       <StyledGallery>
         <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImgLeft} hover={bgImgLeftHover} />
+        <StyledTextContainerGallery>
+          <StyledFlexGallery>
+            <StyledIconLigthGallery />
+            <StyledTitle ligth>reward claim</StyledTitle>
+          </StyledFlexGallery>
+          <Styledp cream>
+            To collect your rewards you must have an NFT from TheGallery
+            Distinguished Collection
+          </Styledp>
+          <PrimaryBtn label="comming soon" ligth />
+        </StyledTextContainerGallery>
         <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImgRigth} hover={bgImgRigthHover} />
       </StyledGallery>
     </StyledBG>

@@ -29,32 +29,37 @@ const StyledBox = styled.div<StyledBoxProp>`
   background-position-y: 75%;
   width: 60%;
   height: 100%;
-  &:hover{    
-    background-image: url(${({hover}) => hover});
-  };
+  &:hover {
+    background-image: url(${({ hover }) => hover});
+  }
 `;
 
-
-
-const StyledTextContainer = styled.div`
+export const StyledTextContainer = styled.div`
   display: flex;
   align-self: center;
   align-items: center;
   flex-direction: column;
 `;
 
-const StyledFlex = styled.div`
+export const StyledFlex = styled.div`
   display: flex;
   width: 100%;
 `;
+type StyledIconProps = {
+  big?: boolean;
+};
 
-const StyledIcon = styled.div`
-  width: 30%;
+export const StyledIcon = styled.div<StyledIconProps>`
+  width: ${({ big }) => (big ? "80%" : "30%")};
+  height: ${({ big }) => (big ? "100%" : "")};
   margin: 0.5rem;
 `;
-
-const Styledp = styled.p`
+type StyledpProps = {
+  cream?: boolean;
+};
+export const Styledp = styled.p<StyledpProps>`
   text-align: center;
+  color: ${({ cream }) => (cream ? "#FFEAE5" : "#000")};
 `;
 export const TheApp = () => {
   const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')

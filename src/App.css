@@ -87,14 +87,13 @@ body {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .responsive {
     display: block;
     height: 100%;
-    width: 100%;   
+    width: 100%;
   }
   .content {
     display: none;
   }
- 
 }
