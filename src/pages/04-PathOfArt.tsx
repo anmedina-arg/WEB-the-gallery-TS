@@ -64,12 +64,30 @@ export const PathOfArt = () => {
   return (
     <StyledBG backgroundimg={BG04}>
       <StyledPathOfArt>
-        <StyledBox img={bgImg} hover={bgImgHover}>
+        <StyledBox
+          onMouseEnter={() => {
+            onAudio.play();
+          }}
+          onMouseLeave={() => {
+            offAudio.play();
+          }}
+          img={bgImg}
+          hover={bgImgHover}
+        >
           <a href="#">
             <StyledTextPainting>ROAD MAP</StyledTextPainting>
           </a>
         </StyledBox>
-        <StyledBox img={bgImg} hover={bgImgHover}>
+        <StyledBox
+          onMouseEnter={() => {
+            onAudio.play();
+          }}
+          onMouseLeave={() => {
+            offAudio.play();
+          }}
+          img={bgImg}
+          hover={bgImgHover}
+        >
           <a href="#">
             <StyledTextPainting ligth>WHITE PAPER</StyledTextPainting>
           </a>
