@@ -12,9 +12,8 @@ import { ThePad } from "./pages/07-ThePad";
 import { Signin } from "./styled-components/TwiterBtn";
 import { PrimaryBtn } from "./styled-components/PrimaryBtn";
 import { StyledIconGallery } from "./styled-components/Icon";
-import { Responsive } from './pages/08-Responsive'
+import { Responsive } from "./pages/08-Responsive";
 import Player from "./MusicIcon/Music";
-
 
 var scrolling = false;
 
@@ -163,11 +162,13 @@ export default function App() {
 
   return (
     <div className="main">
-      <Player></Player>
-      <div className="responsive"> <Responsive/> </div>
+      {/* <Player></Player> */}
+      <div className="responsive">
+        {" "}
+        <Responsive />{" "}
+      </div>
       <div className="content">
         <div className="header">
-          
           <a className="icon_gallery" href="#s-0">
             <StyledIconGallery></StyledIconGallery>
           </a>

@@ -31,6 +31,7 @@ const StyledBox = styled.div<StyledBoxProp>`
   background-image: url(${({ img }) => img});
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   width: 60%;
   height: 100%;
   &:hover {
