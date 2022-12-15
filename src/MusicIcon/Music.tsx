@@ -35,7 +35,8 @@ const Player = () => {
             setActive(false);
             console.log(active);
           } else {
-            audio.pause();
+            console.log("entre al false");
+            // audio.muted;
             setActive(true);
           }
         }}
