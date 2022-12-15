@@ -1,47 +1,67 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-// import onImgMusicHover from '../assets/music/Light-Switch-ON.wav' 
+import BTN_MUSIC from "../assets/Gallery_btn-musicOn-off.png";
+// import onImgMusicHover from '../assets/music/Light-Switch-ON.wav'
 // import off from './Light-Switch-ON.wav'
 
 const StyledPlayer = styled.div`
-  border-radius: 50%;
-  height: 30%;
-  width: 30%;
-  background-color: gray;
+  background-image: url(${BTN_MUSIC});
+  background-size: contain;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
 `;
 
-const Player = ( ) => {
+const StyledPosition = styled.div`
+  position: fixed;
+  top: 12vh;
+`;
 
-  const [active, setActive] = useState<boolean>(false)
+const Player = () => {
+  const [active, setActive] = useState<boolean>(false);
 
-  const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')
-  const offHoverMusic = require('../assets/music/Light-Switch-OFF.wav')
-  const relaxingJazzMusic = require('../assets/music/RelaxedJazz.wav')
+  const onHoverMusic = require("../assets/music/Light-Switch-ON.wav");
+  const offHoverMusic = require("../assets/music/Light-Switch-OFF.wav");
+  const relaxingJazzMusic = require("../assets/music/RelaxedJazz.wav");
   const audio = new Audio(relaxingJazzMusic);
-  
-
 
   return (
-   <div>    
-      {!active ? (
-        <button onClick={() =>{
-          relaxingJazzMusic.play();
-          setActive(!active)
-        }}> Play</button>
-      )
-        : (
-          <button onClick={() =>{
-            relaxingJazzMusic.pause();
-          setActive(!active)
+    <StyledPosition>
+      <StyledPlayer
+        onClick={() => {
+          if (active) {
+            console.log("entre al true");
+            audio.play();
+            setActive(false);
+            console.log(active);
+          } else {
+            audio.pause();
+            setActive(true);
+          }
+        }}
+      />
+      {/* {!active ? (
+        <button
+          onClick={() => {
+            audio.play();
+            setActive(!active);
           }}
-          >pause</button>
-        )
-    }
-   </div>
+        >
+          {" "}
+          Play
+        </button>
+      ) : (
+        <button
+          onClick={() => {
+            audio.pause();
+            setActive(!active);
+          }}
+        >
+          pause
+        </button>
+      )} */}
+    </StyledPosition>
   );
 };
 
-
 export default Player;
-
- 

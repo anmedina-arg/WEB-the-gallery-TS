@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import BG05 from "../assets/reward/09-bg_rewardclaim.png";
-import TR05 from "../assets/reward/10-bg_transition-05.png";
+import TR05 from "../assets/reward/10-bg_transition-05-v3.png";
 import { StyledBG } from "../styled-components/StyledBG";
 import { StyledTransition } from "../styled-components/StyledTransition";
 import bgImg from "../assets/reward/nft-off_rewardclaim.png";
 import bgImgHover from "../assets/reward/nft-hover_rewardclaim.png";
-import { StyledFlex, StyledIcon, Styledp } from "./03-TheApp";
+import { Styledp } from "./03-TheApp";
 import { StyledTitle } from "../styled-components/StyledTitle";
 import { PrimaryBtn } from "../styled-components/PrimaryBtn";
 import { StyledIconLigthGallery } from "../styled-components/IconLigth";
@@ -56,11 +56,11 @@ const StyledFlexReward = styled.div`
 `;
 
 export const Reward = () => {
-  const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')
-  const offHoverMusic = require('../assets/music/Light-Switch-OFF.wav')
-  const onAudio = new Audio(onHoverMusic)
-  const offAudio = new Audio(offHoverMusic)
-  
+  const onHoverMusic = require("../assets/music/Light-Switch-ON.wav");
+  const offHoverMusic = require("../assets/music/Light-Switch-OFF.wav");
+  const onAudio = new Audio(onHoverMusic);
+  const offAudio = new Audio(offHoverMusic);
+
   return (
     <StyledBG backgroundimg={BG05}>
       <StyledReward>
@@ -75,7 +75,16 @@ export const Reward = () => {
           </Styledp>
           <PrimaryBtn label="comming soon" ligth />
         </StyledTextContainerReward>
-        <StyledBox  onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImg} hover={bgImgHover} />
+        <StyledBox
+          onMouseEnter={() => {
+            onAudio.play();
+          }}
+          onMouseLeave={() => {
+            offAudio.play();
+          }}
+          img={bgImg}
+          hover={bgImgHover}
+        />
       </StyledReward>
     </StyledBG>
   );

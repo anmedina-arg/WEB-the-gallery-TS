@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import BG06 from "../assets/gallery/11-bg_my_gallery.png";
-import TR06 from "../assets/gallery/12-bg_transition-06b.png";
+import TR06 from "../assets/gallery/12-bg_transition-06-v2.png";
 import { StyledBG } from "../styled-components/StyledBG";
 import { StyledTransition } from "../styled-components/StyledTransition";
 import bgImgRigth from "../assets/gallery/nft-off_mygallery_der.png";
@@ -8,7 +8,7 @@ import bgImgRigthHover from "../assets/gallery/nft-hover_mygallery_der.png";
 import bgImgLeft from "../assets/gallery/nft-off_mygallery_izq.png";
 import bgImgLeftHover from "../assets/gallery/nft-hover_mygallery_izq.png";
 import { StyledIconLigthGallery } from "../styled-components/IconLigth";
-import { StyledFlex, StyledIcon, Styledp } from "./03-TheApp";
+import { Styledp } from "./03-TheApp";
 import { StyledTitle } from "../styled-components/StyledTitle";
 import { PrimaryBtn } from "../styled-components/PrimaryBtn";
 
@@ -55,15 +55,25 @@ export const StyledFlexGallery = styled.div`
   width: 100%;
   height: 25%;
 `;
+
 export const Gallery = () => {
-  const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')
-  const offHoverMusic = require('../assets/music/Light-Switch-OFF.wav')
-  const onAudio = new Audio(onHoverMusic)
-  const offAudio = new Audio(offHoverMusic)
+  const onHoverMusic = require("../assets/music/Light-Switch-ON.wav");
+  const offHoverMusic = require("../assets/music/Light-Switch-OFF.wav");
+  const onAudio = new Audio(onHoverMusic);
+  const offAudio = new Audio(offHoverMusic);
   return (
     <StyledBG backgroundimg={BG06}>
       <StyledGallery>
-        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImgLeft} hover={bgImgLeftHover} />
+        <StyledBox
+          onMouseEnter={() => {
+            onAudio.play();
+          }}
+          onMouseLeave={() => {
+            offAudio.play();
+          }}
+          img={bgImgLeft}
+          hover={bgImgLeftHover}
+        />
         <StyledTextContainerGallery>
           <StyledFlexGallery>
             <StyledIconLigthGallery />
@@ -75,7 +85,16 @@ export const Gallery = () => {
           </Styledp>
           <PrimaryBtn label="comming soon" ligth />
         </StyledTextContainerGallery>
-        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImgRigth} hover={bgImgRigthHover} />
+        <StyledBox
+          onMouseEnter={() => {
+            onAudio.play();
+          }}
+          onMouseLeave={() => {
+            offAudio.play();
+          }}
+          img={bgImgRigth}
+          hover={bgImgRigthHover}
+        />
       </StyledGallery>
     </StyledBG>
   );

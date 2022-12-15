@@ -14,6 +14,7 @@ import { PrimaryBtn } from "./styled-components/PrimaryBtn";
 import { StyledIconGallery } from "./styled-components/Icon";
 import { Responsive } from "./pages/08-Responsive";
 import Player from "./MusicIcon/Music";
+import { StyledFooter } from "./styled-components/StyledFooter";
 
 var scrolling = false;
 
@@ -162,10 +163,8 @@ export default function App() {
 
   return (
     <div className="main">
-      {/* <Player></Player> */}
       <div className="responsive">
-        {" "}
-        <Responsive />{" "}
+        <Responsive />
       </div>
       <div className="content">
         <div className="header">
@@ -190,6 +189,7 @@ export default function App() {
           <Signin />
           <PrimaryBtn label="conect" />
         </div>
+        <Player />
         <nav id="gallery" className="contenido">
           {list.map((item, i) => (
             <div
@@ -202,6 +202,7 @@ export default function App() {
             </div>
           ))}
         </nav>
+        <StyledFooter />
       </div>
     </div>
   );
