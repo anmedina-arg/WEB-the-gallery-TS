@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import BTN_MUSIC from "../assets/Gallery_btn-musicOn-off.png";
-// import onImgMusicHover from '../assets/music/Light-Switch-ON.wav'
-// import off from './Light-Switch-ON.wav'
 
 const StyledPlayer = styled.div`
   background-image: url(${BTN_MUSIC});
@@ -18,49 +16,22 @@ const StyledPosition = styled.div`
 `;
 
 const Player = () => {
-  const [active, setActive] = useState<boolean>(false);
-
-  const onHoverMusic = require("../assets/music/Light-Switch-ON.wav");
-  const offHoverMusic = require("../assets/music/Light-Switch-OFF.wav");
   const relaxingJazzMusic = require("../assets/music/RelaxedJazz.wav");
-  const audio = new Audio(relaxingJazzMusic);
+  const [playing, setPlaying] = useState(false);
 
+  const audioRef = useRef(new Audio(relaxingJazzMusic));
+  const play = () => {
+    setPlaying(true);
+    audioRef.current.play();
+  };
+
+  const pause = () => {
+    setPlaying(false);
+    audioRef.current.pause();
+  };
   return (
     <StyledPosition>
-      <StyledPlayer
-        onClick={() => {
-          if (active) {
-            console.log("entre al true");
-            audio.play();
-            setActive(false);
-            console.log(active);
-          } else {
-            console.log("entre al false");
-            // audio.muted;
-            setActive(true);
-          }
-        }}
-      />
-      {/* {!active ? (
-        <button
-          onClick={() => {
-            audio.play();
-            setActive(!active);
-          }}
-        >
-          {" "}
-          Play
-        </button>
-      ) : (
-        <button
-          onClick={() => {
-            audio.pause();
-            setActive(!active);
-          }}
-        >
-          pause
-        </button>
-      )} */}
+      <StyledPlayer onClick={playing ? pause : play} className="music" />;
     </StyledPosition>
   );
 };

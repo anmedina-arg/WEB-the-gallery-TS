@@ -35,16 +35,44 @@ const StyledBox = styled.div<StyledBoxProp>`
 `;
 
 export const Home = () => {
-  const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')
-  const offHoverMusic = require('../assets/music/Light-Switch-OFF.wav')
-  const onAudio = new Audio(onHoverMusic)
-  const offAudio = new Audio(offHoverMusic)
+  const onHoverMusic = require("../assets/music/Light-Switch-ON.wav");
+  const offHoverMusic = require("../assets/music/Light-Switch-OFF.wav");
+  const onAudio = new Audio(onHoverMusic);
+  const offAudio = new Audio(offHoverMusic);
   return (
     <StyledBG backgroundimg={BG01}>
       <StyledHome>
-        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} hover={bgImgLeftHover} img={bgImgLeft} />
-        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} hover={bgImgMainHover} big img={bgImgMain} />
-        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} hover={bgImgRigthtHover} img={bgImgRight} />
+        <StyledBox
+          onMouseEnter={() => {
+            onAudio.play();
+          }}
+          onMouseLeave={() => {
+            offAudio.play();
+          }}
+          hover={bgImgLeftHover}
+          img={bgImgLeft}
+        />
+        <StyledBox
+          onMouseEnter={() => {
+            onAudio.play();
+          }}
+          onMouseLeave={() => {
+            offAudio.play();
+          }}
+          hover={bgImgMainHover}
+          big
+          img={bgImgMain}
+        />
+        <StyledBox
+          onMouseEnter={() => {
+            onAudio.play();
+          }}
+          onMouseLeave={() => {
+            offAudio.play();
+          }}
+          hover={bgImgRigthtHover}
+          img={bgImgRight}
+        />
       </StyledHome>
     </StyledBG>
   );
