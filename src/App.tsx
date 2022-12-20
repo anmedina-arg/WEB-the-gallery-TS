@@ -21,6 +21,7 @@ var scrolling = false;
 export default function App() {
   const [popUp, setPopUp] = useState(true)
   const [active, setActive] = useState(0);
+  const [show, setShow] = useState(true);
   const scrollRefs = useRef<any[]>([]);
   const navRefs = useRef<any[]>([]);
 
@@ -147,6 +148,10 @@ export default function App() {
         <div onClick={() => setPopUp(false)}>
           {popUp && <PopUp /> }
         </div>
+        <button onClick={() => setShow(false)} className={show ? "show" : "notShow"} >
+          <p>Scroll the galery to see it all</p>
+          <p> {">>> Click to start <<<"} </p>
+        </button>
         <nav id="gallery" className="contenido">
           {list.map((item, i) => (
             <div
