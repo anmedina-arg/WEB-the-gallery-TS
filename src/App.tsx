@@ -14,11 +14,12 @@ import { PrimaryBtn } from "./styled-components/PrimaryBtn";
 import { StyledIconGallery } from "./styled-components/Icon";
 import { Responsive } from "./pages/08-Responsive";
 import Player from "./MusicIcon/Music";
-import { StyledFooter } from "./styled-components/StyledFooter";
+import { PopUp } from "./styled-components/styledPopUp";
 
 var scrolling = false;
 
 export default function App() {
+  const [popUp, setPopUp] = useState(true)
   const [active, setActive] = useState(0);
   const scrollRefs = useRef<any[]>([]);
   const navRefs = useRef<any[]>([]);
@@ -114,53 +115,6 @@ export default function App() {
     });
   }, []);
 
-  /**/
-
-  // const scrollHandler = (e: any) => {
-  //   // if (e.target !== document) return;
-
-  //   // if (scrolling === true) return;
-
-  //   const scrollRefsElements = scrollRefs.current;
-
-  //   scrollRefsElements.forEach((el, i) => {
-  //     const rect = el.current.getBoundingClientRect();
-  //     const elemRight = rect.right;
-  //     const elemLeft = rect.left;
-
-  //     console.log(rect);
-  //     console.log(elemRight);
-  //     console.log(elemLeft);
-
-  //     const isVisible =
-  //       elemRight < window.innerWidth / 2 && elemLeft > window.innerWidth / 2;
-
-  //     if (isVisible) {
-  //       navRefs.current[i].current.scrollIntoView({
-  //         behavior: "smooth",
-  //         block: "start",
-  //         inline: "center",
-  //       });
-  //       setActive(i);
-  //     }
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   const scrollContainer = document.querySelector("nav");
-  //   if (scrollContainer === null) return;
-  //   scrollContainer.addEventListener("wheel", (evt) => {
-  //     evt.preventDefault();
-  //     scrollContainer.scrollLeft += evt.deltaY;
-  //   });
-
-  //   document.addEventListener("whell", scrollHandler, true);
-
-  //   return () => {
-  //     document.removeEventListener("whell", scrollHandler, true);
-  //   };
-  // }, []);
-
   return (
     <div className="main">
       <div className="responsive">
@@ -190,9 +144,13 @@ export default function App() {
           <PrimaryBtn label="conect" />
         </div>
         <Player />
+        <div onClick={() => setPopUp(false)}>
+          {popUp && <PopUp /> }
+        </div>
         <nav id="gallery" className="contenido">
           {list.map((item, i) => (
             <div
+              key={i}
               id={`s-${i}`}
               ref={scrollRefs.current[i]}
               onWheel={scrollHandler}
@@ -202,7 +160,6 @@ export default function App() {
             </div>
           ))}
         </nav>
-        <StyledFooter />
       </div>
     </div>
   );

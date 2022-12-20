@@ -28,11 +28,9 @@ const StyledBox = styled.div<StyledBoxProp>`
   display: flex;
   align-items: flex-end;
   background-image: url(${({ img }) => img});
-  /* background-size: contain; */
   background-repeat: no-repeat;
   width: 40%;
-  /* height: 100%; */
-  /* display: flex; */
+
   justify-content: center;
   &:hover {
     background-image: url(${({ hover }) => hover});
@@ -46,7 +44,7 @@ type StyledTextPaintingProps = {
 const StyledTextPainting = styled.p<StyledTextPaintingProps>`
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 3rem;
   color: ${({ ligth }) => (ligth ? "#ccddff" : "#3d518c")};
   margin-bottom: 90px;
   line-height: 100%;
@@ -74,7 +72,7 @@ export const PathOfArt = () => {
           img={bgImg}
           hover={bgImgHover}
         >
-          <a href="#">
+          <a href="https://the-gallery.gitbook.io/documentation/the-concept/what-is-thegallery" target='_blank' rel="noreferrer">
             <StyledTextPainting>ROAD MAP</StyledTextPainting>
           </a>
         </StyledBox>
@@ -88,7 +86,7 @@ export const PathOfArt = () => {
           img={bgImg}
           hover={bgImgHover}
         >
-          <a href="#">
+          <a href="https://the-gallery.gitbook.io/documentation/the-goal/roadmap" target='_blank' rel="noreferrer">
             <StyledTextPainting ligth>WHITE PAPER</StyledTextPainting>
           </a>
         </StyledBox>

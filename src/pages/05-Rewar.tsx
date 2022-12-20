@@ -67,7 +67,7 @@ export const Reward = () => {
         <StyledTextContainerReward>
           <StyledFlexReward>
             <StyledIconLigthGallery />
-            <StyledTitle ligth>reward claim</StyledTitle>
+            <StyledTitle ligth left>reward claim</StyledTitle>
           </StyledFlexReward>
           <Styledp cream>
             To collect your rewards you must have an NFT from TheGallery

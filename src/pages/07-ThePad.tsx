@@ -39,7 +39,6 @@ export const StyledTextContainerPad = styled.div`
   flex-direction: column;
   width: 30%;
   justify-content: space-evenly;
-  border: 1px solid black;
   height: 70%;
 `;
 
@@ -75,8 +74,8 @@ export const ThePad = () => {
           <StyledFlexPad>
             <StyledIconLigthGallery />
             <div className="title">
-              <StyledTitle ligth>the</StyledTitle>
-              <StyledTitle ligth>pad</StyledTitle>
+              <StyledTitle ligth left>the</StyledTitle>
+              <StyledTitle ligth left>pad</StyledTitle>
             </div>
           </StyledFlexPad>
           <Styledp cream>

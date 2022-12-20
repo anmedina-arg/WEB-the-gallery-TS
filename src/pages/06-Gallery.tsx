@@ -46,7 +46,6 @@ export const StyledTextContainerGallery = styled.div`
   flex-direction: column;
   width: 30%;
   justify-content: space-evenly;
-  border: 1px solid black;
   height: 70%;
 `;
 
@@ -77,7 +76,7 @@ export const Gallery = () => {
         <StyledTextContainerGallery>
           <StyledFlexGallery>
             <StyledIconLigthGallery />
-            <StyledTitle ligth>reward claim</StyledTitle>
+            <StyledTitle ligth left>reward claim</StyledTitle>
           </StyledFlexGallery>
           <Styledp cream>
             To collect your rewards you must have an NFT from TheGallery

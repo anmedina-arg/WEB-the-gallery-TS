@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-export const StyledSubTitle = styled.p`
+type StyledSubTitleProps = {
+  fontMin?: boolean
+}
+
+export const StyledSubTitle = styled.p<StyledSubTitleProps>`
   margin: 0;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: ${({ fontMin }) => (fontMin ? "1.8rem" : "2rem")};
 `;
