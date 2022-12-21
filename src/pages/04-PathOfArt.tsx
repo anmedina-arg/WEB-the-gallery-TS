@@ -62,8 +62,8 @@ export const PathOfArt = () => {
           <StyledBox
             img={bgImg}
             hover={bgImgHover}
-          >
-            <a href="https://the-gallery.gitbook.io/documentation/the-concept/what-is-thegallery" target='_blank' rel="noreferrer">
+        >
+            <a href="https://the-gallery.gitbook.io/documentation/the-goal/roadmap" target='_blank' rel="noreferrer">
               <StyledTextPainting>ROAD</StyledTextPainting>
               <StyledTextPainting>MAP</StyledTextPainting>
             </a>
@@ -73,7 +73,7 @@ export const PathOfArt = () => {
           img={bgImg}
           hover={bgImgHover}
         >
-          <a href="https://the-gallery.gitbook.io/documentation/the-goal/roadmap" target='_blank' rel="noreferrer">
+          <a href="https://the-gallery.gitbook.io/documentation/the-concept/what-is-thegallery" target='_blank' rel="noreferrer">
             <StyledTextPainting ligth>WHITE</StyledTextPainting>
             <StyledTextPainting ligth>PAPER</StyledTextPainting>
           </a>

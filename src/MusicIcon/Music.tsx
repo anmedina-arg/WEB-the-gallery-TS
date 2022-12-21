@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import BTN_MUSIC_ON from "../assets/Gallery_btn-musicOn-off.png";
 import BTN_MUSIC_ON_HOVER from "../assets/Gallery_btn-musicOn-hover.png";
@@ -46,6 +46,7 @@ const Player = () => {
   const [playing, setPlaying] = useState(false);
 
   const audioRef = useRef(new Audio(relaxingJazzMusic));
+  
   const play = () => {
     setPlaying(true);
     audioRef.current.play();
@@ -55,12 +56,13 @@ const Player = () => {
     setPlaying(false);
     audioRef.current.pause();
   };
+
   return (
     <StyledPosition>
       {playing ? 
-        (<StyledPlayerOn onClick={playing ? pause : play} className="music" />)
+        (<StyledPlayerOn onClick={playing ? pause : play}  />)
         :
-        (<StyledPlayerOff onClick={playing ? pause : play} className="music" />)
+        (<StyledPlayerOff onClick={playing ? pause : play} />)
       
     }
     </StyledPosition>
