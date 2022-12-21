@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import BG07 from "../assets/pad/13-bg_thepad-v2.png";
 import { StyledBG } from "../styled-components/StyledBG";
-import bgImg from "../assets/pad/nft-off_thepad.png";
-import bgImgHover from "../assets/pad/nft-hover_thepad.png";
+import bgImgHover from "../assets/pad/nft-off_thepad.png";
+import bgImg from "../assets/pad/nft-hover_thepad.png";
 import { StyledTitle } from "../styled-components/StyledTitle";
 import { StyledIconLigthGallery } from "../styled-components/IconLigth";
 import { PrimaryBtn } from "../styled-components/PrimaryBtn";
