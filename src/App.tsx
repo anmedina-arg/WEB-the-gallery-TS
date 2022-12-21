@@ -16,12 +16,11 @@ import { Responsive } from "./pages/08-Responsive";
 import Player from "./MusicIcon/Music";
 import { PopUp } from "./styled-components/styledPopUp";
 
-var scrolling = false;
+let scrolling = false;
 
 export default function App() {
   const [popUp, setPopUp] = useState(true)
   const [active, setActive] = useState(0);
-  const [show, setShow] = useState(true);
   const scrollRefs = useRef<any[]>([]);
   const navRefs = useRef<any[]>([]);
 
@@ -52,14 +51,11 @@ export default function App() {
 
   const scrollTo = (index: number) => {
     scrolling = true;
-
     scrollRefs.current[index].current.scrollIntoView({
       behavior: "smooth",
       inline: "center",
     });
-
     setActive(index);
-
     setTimeout(() => {
       scrolling = false;
       navRefs.current[index].current.scrollIntoView({
@@ -69,22 +65,14 @@ export default function App() {
     }, 1000);
   };
 
-  /**/
-
   const scrollHandler = (e: any) => {
-    // if (e.target !== document) return;
-
-    // if (scrolling === true) return;
 
     const scrollRefsElements = scrollRefs.current;
 
     scrollRefsElements.forEach((el: any, i: number) => {
       const rect = el.current.getBoundingClientRect();
-      console.log(el);
       const elemTop = rect.left;
       const elemBottom = rect.right;
-      console.log(el.current.getBoundingClientRect().left);
-      console.log(elemBottom);
       const isVisible =
         elemTop < window.innerWidth / 2 && elemBottom > window.innerWidth / 2;
 
@@ -142,7 +130,7 @@ export default function App() {
             ))}
           </div>
           <Signin />
-          <PrimaryBtn label="conect" />
+          <PrimaryBtn label="connect" />
         </div>
         <Player />
         <div onClick={() => setPopUp(false)}>

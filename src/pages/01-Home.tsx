@@ -4,10 +4,10 @@ import TR01 from "../assets/home/02-bg_transition-01.png";
 import { StyledBG } from "../styled-components/StyledBG";
 import { StyledTransition } from "../styled-components/StyledTransition";
 import bgImgLeft from "../assets/home/frame-off_home-izq.png";
-import bgImgLeftHover from "../assets/home/frame-hover_home-izq.png";
+import bgImgLeftHover from "../assets/home/frame-hover_home-izq_v2.png";
 import bgImgMain from "../assets/home/frame-off_home-main.png";
-import bgImgMainHover from "../assets/home/frame-hover_home-main.png";
-import bgImgRigthtHover from "../assets/home/frame-hover_home-der.png";
+import bgImgMainHover from "../assets/home/frame-hover_home-main_v2.png";
+import bgImgRigthtHover from "../assets/home/frame-hover_home-der_v2.png";
 import bgImgRight from "../assets/home/frame-off_home-der.png";
 
 const StyledHome = styled.div`
@@ -35,41 +35,19 @@ const StyledBox = styled.div<StyledBoxProp>`
 `;
 
 export const Home = () => {
-  const onHoverMusic = require("../assets/music/Light-Switch-ON.wav");
-  const offHoverMusic = require("../assets/music/Light-Switch-OFF.wav");
-  const onAudio = new Audio(onHoverMusic);
-  const offAudio = new Audio(offHoverMusic);
   return (
     <StyledBG backgroundimg={BG01}>
       <StyledHome>
         <StyledBox
-          onMouseEnter={() => {
-            onAudio.play();
-          }}
-          onMouseLeave={() => {
-            offAudio.play();
-          }}
           hover={bgImgLeftHover}
           img={bgImgLeft}
         />
         <StyledBox
-          onMouseEnter={() => {
-            onAudio.play();
-          }}
-          onMouseLeave={() => {
-            offAudio.play();
-          }}
           hover={bgImgMainHover}
           big
           img={bgImgMain}
         />
         <StyledBox
-          onMouseEnter={() => {
-            onAudio.play();
-          }}
-          onMouseLeave={() => {
-            offAudio.play();
-          }}
           hover={bgImgRigthtHover}
           img={bgImgRight}
         />

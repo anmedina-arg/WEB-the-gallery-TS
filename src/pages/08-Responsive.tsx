@@ -1,11 +1,6 @@
 import styled from "styled-components";
-import BG07 from "../assets/pad/13-bg_thepad.png";
-import { StyledBG } from "../styled-components/StyledBG";
 import bgImg from "../assets/01-bg-mobile_home-2.png";
-import { StyledTitle } from "../styled-components/StyledTitle";
-import { StyledSubTitle } from "../styled-components/StyledSubTitle";
 import { PrimaryBtn } from "../styled-components/PrimaryBtn";
-import { StyledIconGallery } from "../styled-components/Icon";
 import  LOGO from '../assets/LOGO.png'
 
 
@@ -82,7 +77,7 @@ export const Responsive = () => {
   return (    
         <StyledBox img={bgImg}>
             <StyledResponsive>   
-                <img className="imgResponsive" src={LOGO} />
+                <img className="imgResponsive" src={LOGO} alt='logo_apes'/>
                 <p>IS BEING DEVELOPED ON MOBILE</p>             
             </StyledResponsive>
             <StyledResponsive1>

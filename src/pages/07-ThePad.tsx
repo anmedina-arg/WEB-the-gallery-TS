@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import BG07 from "../assets/pad/13-bg_thepad.png";
+import BG07 from "../assets/pad/13-bg_thepad-v2.png";
 import { StyledBG } from "../styled-components/StyledBG";
-import bgImg from "../assets/pad/nft-off_thepad-B.png";
-import bgImgHover from "../assets/pad/nft-hover_thepad-B.png";
+import bgImg from "../assets/pad/nft-off_thepad.png";
+import bgImgHover from "../assets/pad/nft-hover_thepad.png";
 import { StyledTitle } from "../styled-components/StyledTitle";
 import { StyledIconLigthGallery } from "../styled-components/IconLigth";
 import { PrimaryBtn } from "../styled-components/PrimaryBtn";
@@ -10,7 +10,7 @@ import { Styledp } from "./03-TheApp";
 
 const StyledThePad = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   height: 100%;
   width: 100%;
 `;
@@ -20,11 +20,12 @@ type StyledBoxProp = {
 };
 
 const StyledBox = styled.div<StyledBoxProp>`
+  width: 60%;
+  background-position-y: 20%;
   background-image: url(${({ img }) => img});
   background-size: contain;
   background-repeat: no-repeat;
   align-self: center;
-  width: 50%;
   display: flex;
   height: 100%;
   &:hover {
@@ -53,20 +54,10 @@ export const StyledFlexPad = styled.div`
 `;
 
 export const ThePad = () => {
-  const onHoverMusic = require("../assets/music/Light-Switch-ON.wav");
-  const offHoverMusic = require("../assets/music/Light-Switch-OFF.wav");
-  const onAudio = new Audio(onHoverMusic);
-  const offAudio = new Audio(offHoverMusic);
   return (
     <StyledBG backgroundimg={BG07}>
       <StyledThePad>
         <StyledBox
-          onMouseEnter={() => {
-            onAudio.play();
-          }}
-          onMouseLeave={() => {
-            offAudio.play();
-          }}
           img={bgImg}
           hover={bgImgHover}
         />

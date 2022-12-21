@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import BG06 from "../assets/gallery/11-bg_my_gallery.png";
-import TR06 from "../assets/gallery/12-bg_transition-06-v2.png";
+import TR06 from "../assets/gallery/12-bg_transition-06-v3.png";
 import { StyledBG } from "../styled-components/StyledBG";
 import { StyledTransition } from "../styled-components/StyledTransition";
 import bgImgRigth from "../assets/gallery/nft-off_mygallery_der.png";
@@ -56,20 +56,11 @@ export const StyledFlexGallery = styled.div`
 `;
 
 export const Gallery = () => {
-  const onHoverMusic = require("../assets/music/Light-Switch-ON.wav");
-  const offHoverMusic = require("../assets/music/Light-Switch-OFF.wav");
-  const onAudio = new Audio(onHoverMusic);
-  const offAudio = new Audio(offHoverMusic);
+  
   return (
     <StyledBG backgroundimg={BG06}>
       <StyledGallery>
         <StyledBox
-          onMouseEnter={() => {
-            onAudio.play();
-          }}
-          onMouseLeave={() => {
-            offAudio.play();
-          }}
           img={bgImgLeft}
           hover={bgImgLeftHover}
         />
@@ -82,15 +73,9 @@ export const Gallery = () => {
             To collect your rewards you must have an NFT from TheGallery
             Distinguished Collection
           </Styledp>
-          <PrimaryBtn label="comming soon" ligth />
+          <PrimaryBtn label="coming soon" ligth />
         </StyledTextContainerGallery>
         <StyledBox
-          onMouseEnter={() => {
-            onAudio.play();
-          }}
-          onMouseLeave={() => {
-            offAudio.play();
-          }}
           img={bgImgRigth}
           hover={bgImgRigthHover}
         />

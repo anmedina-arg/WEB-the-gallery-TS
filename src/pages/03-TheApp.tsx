@@ -23,12 +23,14 @@ const StyledTheApp = styled.div`
 `;
 const StyledBox = styled.div<StyledBoxProp>`
   background-image: url(${({ img }) => img});
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: 75%;
   width: 60%;
-  height: 100%;
+  height: 90%;
+  top: 5vh;
+  position: relative;
   &:hover {
     background-image: url(${({ hover }) => hover});
   }
@@ -62,22 +64,18 @@ export const Styledp = styled.p<StyledpProps>`
   color: ${({ cream }) => (cream ? "#FFEAE5" : "#000")};
 `;
 export const TheApp = () => {
-  const onHoverMusic = require('../assets/music/Light-Switch-ON.wav')
-  const offHoverMusic = require('../assets/music/Light-Switch-OFF.wav')
-  const onAudio = new Audio(onHoverMusic)
-  const offAudio = new Audio(offHoverMusic)
   
   return (
     <StyledBG backgroundimg={BG03}>
       <StyledTheApp>
-        <StyledBox onMouseEnter={() => { onAudio.play()}} onMouseLeave={() => {offAudio.play()}} img={bgImg} hover={bgImgHover} />
+        <StyledBox img={bgImg} hover={bgImgHover} />
         <StyledTextContainer>
           <StyledFlex>
             <StyledIcon>
               <StyledIconGallery center />
             </StyledIcon>
             <div>
-              <StyledTitle>is comming soon.</StyledTitle>
+              <StyledTitle>is coming soon.</StyledTitle>
               <StyledSubTitle>SHARE YOUR NFTs</StyledSubTitle>
               <StyledSubTitle>WITH THE WORLD</StyledSubTitle>
             </div>
