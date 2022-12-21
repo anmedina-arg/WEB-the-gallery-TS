@@ -21,13 +21,10 @@ type StyledBoxProp = {
 
 const StyledBox = styled.div<StyledBoxProp>`
   width: 60%;
-  background-position-y: 20%;
   background-image: url(${({ img }) => img});
   background-size: contain;
   background-repeat: no-repeat;
-  align-self: center;
-  display: flex;
-  height: 100%;
+  height: 90%;
   &:hover {
     background-image: url(${({ hover }) => hover});
   }
