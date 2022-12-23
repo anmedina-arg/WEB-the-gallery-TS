@@ -9,21 +9,17 @@ import bgImgHoverRew from "../assets/reward/nft-hover_rewardclaim.webp";
 import bgImgRigthHoverGall from "../assets/gallery/nft-hover_mygallery_der.webp";
 import bgImgLeftHoverGall from "../assets/gallery/nft-hover_mygallery_izq.webp";
 
-
-
-
-
 export const RendAux = () => {
   return <div>
-    {bgImgLeftHover}
-    {bgImgMainHover}
-    {bgImgRigthtHover}
-    {bgImgHover}
-    {bgImgHoverTheApp}
-    {bgImgHoverPath}
-    {bgImgHoverRew}
-    {bgImgRigthHoverGall}
-    {bgImgLeftHoverGall}
-    {bgImgHoverThePad}
+    <img src={bgImgLeftHover} alt="" />
+    <img src={bgImgMainHover} alt="" />
+    <img src={bgImgRigthtHover} alt="" />
+    <img src={bgImgHover} alt="" />
+    <img src={bgImgHoverTheApp} alt="" />
+    <img src={bgImgHoverPath} alt="" />
+    <img src={bgImgHoverRew} alt="" />
+    <img src={bgImgRigthHoverGall} alt="" />
+    <img src={bgImgLeftHoverGall} alt="" />
+    <img src={bgImgHoverThePad} alt="" />
   </div>
 }
