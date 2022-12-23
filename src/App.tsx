@@ -15,6 +15,8 @@ import { StyledIconGallery } from "./styled-components/Icon";
 import { Responsive } from "./pages/08-Responsive";
 import Player from "./MusicIcon/Music";
 import { PopUp } from "./styled-components/styledPopUp";
+import { RendAux } from "./pages/09-AuxRendHover";
+
 
 let scrolling = false;
 
@@ -106,6 +108,9 @@ export default function App() {
 
   return (
     <div className="main">
+      <div className="displaynone">
+        <RendAux />
+      </div>
       <div className="responsive">
         <Responsive />
       </div>

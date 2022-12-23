@@ -106,3 +106,7 @@ body {
   opacity: 0.7;
   animation: start 2s ease-in ;
 }
+
+.displaynone{
+  display: none;
+}
