@@ -1,5 +1,6 @@
 {
   "name": "web-the-gallery-ts",
+  "homepage": "http://thegallery.live",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

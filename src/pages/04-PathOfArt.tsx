@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import BG04 from "../assets/pathofart/07-bg_pathofart.png";
-import TR04 from "../assets/pathofart/08-bg_transition-04.png";
+import BG04 from "../assets/pathofart/07-bg_pathofart.webp";
+import TR04 from "../assets/pathofart/08-bg_transition-04.webp";
 import { StyledBG } from "../styled-components/StyledBG";
 import { StyledTransition } from "../styled-components/StyledTransition";
-import bgImg from "../assets/pathofart/frame-off_pathofart.png";
-import bgImgHover from "../assets/pathofart/frame-hover_pathofart.png";
+import bgImg from "../assets/pathofart/frame-off_pathofart.webp";
+import bgImgHover from "../assets/pathofart/frame-hover_pathofart.webp";
 
 const StyledPathOfArt = styled.div`
   display: flex;

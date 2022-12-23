@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import BG05 from "../assets/reward/09-bg_rewardclaim.png";
-import TR05 from "../assets/reward/10-bg_transition-05.png";
+import BG05 from "../assets/reward/09-bg_rewardclaim.webp";
+import TR05 from "../assets/reward/10-bg_transition-05.webp";
 import { StyledBG } from "../styled-components/StyledBG";
 import { StyledTransition } from "../styled-components/StyledTransition";
-import bgImg from "../assets/reward/nft-off_rewardclaim.png";
-import bgImgHover from "../assets/reward/nft-hover_rewardclaim.png";
+import bgImg from "../assets/reward/nft-off_rewardclaim.webp";
+import bgImgHover from "../assets/reward/nft-hover_rewardclaim.webp";
 import { Styledp } from "./03-TheApp";
 import { StyledTitle } from "../styled-components/StyledTitle";
 import { PrimaryBtn } from "../styled-components/PrimaryBtn";

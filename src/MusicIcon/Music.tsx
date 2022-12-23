@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import BTN_MUSIC_ON from "../assets/Gallery_btn-musicOn-off.png";
 import BTN_MUSIC_ON_HOVER from "../assets/Gallery_btn-musicOn-hover.png";

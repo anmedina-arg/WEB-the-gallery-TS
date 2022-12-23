@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import BG01 from "../assets/home/01-bg_home.png";
-import TR01 from "../assets/home/02-bg_transition-01.png";
+import BG01 from "../assets/home/01-bg_home.webp";
+import TR01 from "../assets/home/02-bg_transition-01.webp";
 import { StyledBG } from "../styled-components/StyledBG";
 import { StyledTransition } from "../styled-components/StyledTransition";
-import bgImgLeft from "../assets/home/frame-off_home-izq.png";
-import bgImgLeftHover from "../assets/home/frame-hover_home-izq_v2.png";
-import bgImgMain from "../assets/home/frame-off_home-main.png";
-import bgImgMainHover from "../assets/home/frame-hover_home-main_v2.png";
-import bgImgRigthtHover from "../assets/home/frame-hover_home-der_v2.png";
-import bgImgRight from "../assets/home/frame-off_home-der.png";
+import bgImgLeft from "../assets/home/frame-off_home-izq.webp";
+import bgImgLeftHover from "../assets/home/frame-hover_home-izq.webp";
+import bgImgMain from "../assets/home/frame-off_home-main.webp";
+import bgImgMainHover from "../assets/home/frame-hover_home-main.webp";
+import bgImgRigthtHover from "../assets/home/frame-hover_home-der.webp";
+import bgImgRight from "../assets/home/frame-off_home-der.webp";
 
 const StyledHome = styled.div`
   display: flex;

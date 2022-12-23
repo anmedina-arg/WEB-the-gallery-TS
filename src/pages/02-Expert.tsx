@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import BG02 from "../assets/experts/03-bg_experts.png";
-import TR02 from "../assets/experts/04-bg_transition-02.png";
+import BG02 from "../assets/experts/03-bg_experts.webp";
+import TR02 from "../assets/experts/04-bg_transition-02.webp";
 import { StyledBG } from "../styled-components/StyledBG";
 import { StyledTransition } from "../styled-components/StyledTransition";
 import texto from "../assets/experts/TXT.png";
-import bgImg from "../assets/experts/nft-off_experts.png";
-import bgImgHover from "../assets/experts/nft-hover_experts.png";
+import bgImg from "../assets/experts/nft-off_experts.webp";
+import bgImgHover from "../assets/experts/nft-hover_experts.webp";
 
 const StyledExpert = styled.div`
   display: flex;

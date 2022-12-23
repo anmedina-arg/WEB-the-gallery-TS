@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import BG03 from "../assets/theapp/05-bg_theapp.png";
-import TR03 from "../assets/theapp/06-bg_transition-03.png";
+import BG03 from "../assets/theapp/05-bg_theapp.webp";
+import TR03 from "../assets/theapp/06-bg_transition-03.webp";
 import { StyledBG } from "../styled-components/StyledBG";
 import { StyledTransition } from "../styled-components/StyledTransition";
-import bgImg from "../assets/theapp/frame-off_theapp.png";
-import bgImgHover from "../assets/theapp/frame-hover_theapp.png";
+import bgImg from "../assets/theapp/frame-off_theapp.webp";
+import bgImgHover from "../assets/theapp/frame-hover_theapp.webp";
 import { StyledTitle } from "../styled-components/StyledTitle";
 import { StyledSubTitle } from "../styled-components/StyledSubTitle";
 import { StyledIconGallery } from "../styled-components/Icon";

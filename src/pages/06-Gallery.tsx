@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import BG06 from "../assets/gallery/11-bg_my_gallery.png";
-import TR06 from "../assets/gallery/12-bg_transition-06-v3.png";
+import BG06 from "../assets/gallery/11-bg_my_gallery.webp";
+import TR06 from "../assets/gallery/12-bg_transition-06.webp";
 import { StyledBG } from "../styled-components/StyledBG";
 import { StyledTransition } from "../styled-components/StyledTransition";
-import bgImgRigth from "../assets/gallery/nft-off_mygallery_der.png";
-import bgImgRigthHover from "../assets/gallery/nft-hover_mygallery_der.png";
-import bgImgLeft from "../assets/gallery/nft-off_mygallery_izq.png";
-import bgImgLeftHover from "../assets/gallery/nft-hover_mygallery_izq.png";
+import bgImgRigth from "../assets/gallery/nft-off_mygallery_der.webp";
+import bgImgRigthHover from "../assets/gallery/nft-hover_mygallery_der.webp";
+import bgImgLeft from "../assets/gallery/nft-off_mygallery_izq.webp";
+import bgImgLeftHover from "../assets/gallery/nft-hover_mygallery_izq.webp";
 import { StyledIconLigthGallery } from "../styled-components/IconLigth";
 import { Styledp } from "./03-TheApp";
 import { StyledTitle } from "../styled-components/StyledTitle";
