@@ -40,9 +40,9 @@ const StyledPlayerOff = styled.div<StyledPlayerOffProps>`
   }
 `;
 
+const relaxingJazzMusic = require("../assets/music/RelaxedJazz.wav");
 
 const Player = () => {
-  const relaxingJazzMusic = require("../assets/music/RelaxedJazz.wav");
   const [playing, setPlaying] = useState(false);
 
   const audioRef = useRef(new Audio(relaxingJazzMusic));
