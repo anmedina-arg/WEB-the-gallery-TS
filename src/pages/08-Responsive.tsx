@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bgImg from "../assets/01-bg-mobile_home-2.png";
+import bgImg from "../assets/01-bg-mobile_home.webp";
 import { PrimaryBtn } from "../styled-components/PrimaryBtn";
 import  LOGO from '../assets/LOGO.png'
 

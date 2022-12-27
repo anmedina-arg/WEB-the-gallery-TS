@@ -67,11 +67,10 @@ export const Gallery = () => {
         <StyledTextContainerGallery>
           <StyledFlexGallery>
             <StyledIconLigthGallery />
-            <StyledTitle ligth left>reward claim</StyledTitle>
+            <StyledTitle ligth left>my gallery</StyledTitle>
           </StyledFlexGallery>
           <Styledp cream>
-            To collect your rewards you must have an NFT from TheGallery
-            Distinguished Collection
+            Soon you will have access to show your NFTs to the whole world.
           </Styledp>
           <PrimaryBtn label="coming soon" ligth />
         </StyledTextContainerGallery>
