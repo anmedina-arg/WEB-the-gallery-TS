@@ -50,6 +50,7 @@ const Player = () => {
   const play = () => {
     setPlaying(true);
     audioRef.current.play();
+    audioRef.current.loop=true;
   };
 
   const pause = () => {
